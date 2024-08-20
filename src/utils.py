@@ -16,4 +16,4 @@ def save_object(file_path, obj):
             pd.dump(obj, file_obj)
     
     except Exception as e:
-        CustomException(e,sys)
+        raise CustomException(e,sys)
