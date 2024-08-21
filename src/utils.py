@@ -1,11 +1,8 @@
 import os
 import sys
-
-import numpy as np
 import pandas as pd
 
-from src.exception import CustomException
-
+from src import exception 
 def save_object(file_path, obj):
     try:
         dir_path = os.path.dirname(file_path)
@@ -16,4 +13,4 @@ def save_object(file_path, obj):
             pd.dump(obj, file_obj)
     
     except Exception as e:
-        raise CustomException(e,sys)
+        raise exception.CustomException(e,sys)
